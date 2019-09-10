@@ -12,9 +12,9 @@ export const todoReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return {
-                ...state, todos: [...state.todo, action.payload]
+                ...state, todos: [...state.todos, {item: action.payload, completed: false, id: Date.now()}]
             };
-            
+
             default: 
             return state;
     }
