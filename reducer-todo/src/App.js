@@ -9,8 +9,8 @@ function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState);
   console.log("state", state);
 
-  const addTodo = item => {
-    dispatch({ type: "ADD_TODO", payload: item });
+  const addTodo = (item, party) => {
+    dispatch({ type: "ADD_TODO", payload: item, payload2: party });
   };
 
   const clearDone = () => {

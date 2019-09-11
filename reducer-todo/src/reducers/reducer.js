@@ -1,9 +1,11 @@
 export const initialState = {
     todos: [
         {
-            item: 'Learn about reducers',
+            item: 'Jones',
             completed: false,
-            id: 3892987589
+            id: 3892987589,
+            time: `${new Date().getHours()}:${new Date().getMinutes()}`,
+            party: 5
         }
     ]
 }
@@ -13,7 +15,7 @@ export const todoReducer = (state, action) => {
         case 'ADD_TODO':
             
             return {
-                ...state, todos: [...state.todos, {item: action.payload, completed: false, id: Date.now()}]
+                ...state, todos: [...state.todos, {item: action.payload, completed: false, id: Date.now(), party: action.payload2}]
             };
         case 'TOGGLE_DONE': 
 
