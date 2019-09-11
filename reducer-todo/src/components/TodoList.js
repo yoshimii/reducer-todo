@@ -4,9 +4,9 @@ const TodoList = (props) => {
     const { toggleDone } = props;
         return (
             <div>
-                Waiting List
+                <h3>Waiting List</h3>
                 {props.state.map(item => {
-                    return <><h1 className={`todo-${item.completed ? 'completed' : ''}`}>{item.item}</h1>
+                    return <><h3 className={`todo-${item.completed ? 'completed' : ''}`}>Name: {item.item}</h3> <p className={`todo-${item.completed ? 'completed' : ''}`}>Time: {item.time} Party size: {item.party}</p>
                     <button onClick={() => toggleDone(item.id)}>Seated</button></>
                 })}
             </div>

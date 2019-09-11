@@ -41,8 +41,8 @@ const TodoForm = (props) => {
             onChange={handlePartyChanges}
             value={party}
             />
-            <button type='submit'>Add Todo</button>
-            <button onClick={handleClear}>Clear Completed Todos</button>
+            <button type='submit'>Add Guests</button>
+            <button onClick={handleClear}>Clear Seated Guests</button>
         </form>
     )
 }
