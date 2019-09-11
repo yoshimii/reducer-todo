@@ -18,7 +18,7 @@ const TodoList = (props) => {
                     <td className={`todo-${item.completed ? 'completed' : ''}`}>{item.item}<span className={`present-${item.kids ? '' : 'true'}`}> 👶</span></td>
                     <td className={`todo-${item.completed ? 'completed' : ''}`}>{item.party}</td>
                     <td><button onClick={() => toggleKids(item.id)}>Kids</button></td>
-                    <td>{item.time}</td>
+                    <td className={`todo-${item.completed ? 'completed' : ''}`}>{item.time}</td>
                     <td><button onClick={() => toggleDone(item.id)}>Seated</button></td>
                     </tr>
                     </>
