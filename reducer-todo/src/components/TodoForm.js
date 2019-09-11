@@ -1,20 +1,23 @@
-import React, {useState, useReducer} from 'react';
-import { initialState, todoReducer } from '../reducers/reducer';
+import React, { useState } from 'react';
 
-const TodoForm = () => {
-    const [todo, setTodo] = useState();
-    const [state, dispatch] = useReducer(todoReducer, initialState);
+const TodoForm = (props) => {
+    const [todo, setTodo] = useState('');
+    const { addTodo, clearDone } = props;
 
     const handleChanges = e => {
         e.preventDefault();
         setTodo(e.target.value);
     };
-    console.log(state.todos)
+
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({type: 'ADD_TODO', payload: todo});
-        console.log(state.todos)
+        addTodo(todo);
         setTodo('');
+    }
+
+    const handleClear = e => {
+        e.preventDefault();
+        clearDone();
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -27,7 +30,7 @@ const TodoForm = () => {
             >
             </input>
             <button type='submit'>Add Todo</button>
-            <button>Remove Todo</button>
+            <button onClick={handleClear}>Clear Completed Todos</button>
         </form>
     )
 }
