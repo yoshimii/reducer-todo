@@ -1,7 +1,12 @@
-/* .App {
+ .App {
   text-align: center;
+  font-family: 'Playfair Display', serif;
 }
 
+body {
+  font-family: 'Playfair Display', serif;
+}
+/*
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -17,20 +22,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Playfair Display', serif;
 } 
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} 
+}  */
 
 .todo-completed {
   text-decoration: line-through;
@@ -42,6 +45,7 @@ table {
   border-collapse: collapse;
   width: 90%;
   color: white;
+  font-family: 'Playfair Display', serif;
 }
 
 td, th {
@@ -56,14 +60,22 @@ td, th {
 .MuiInputBase-input.MuiInput-input {
   color: white;
   margin: 1.1rem;
+  
 }
-
+.MuiButton-sizeSmall {
+  font-family: 'Playfair Display', serif;
+}
 .MuiButton-label {
   color:white;
 }
 .MuiGrid-root.MuiGrid-item {
   margin: 1.1rem;
+  font-family: 'Playfair Display', serif;
+}
+.MuiInputBase-root {
+  font-family: 'Playfair Display', serif;
 }
 form {
   margin-top: 1.1rem;
+  font-family: 'Playfair Display', serif;
 }
