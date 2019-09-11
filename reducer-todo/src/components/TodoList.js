@@ -1,15 +1,29 @@
 import React from 'react';
 
 const TodoList = (props) => {
-    const { toggleDone } = props;
+    const { toggleDone, toggleKids } = props;
         return (
-            <div>
-                <h3>Waiting List</h3>
+            <table>
+                <h2>Waiting List</h2>
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Kids</th>
+                    <th>Time</th>
+                    <th>Seated</th>
+                </tr>
                 {props.state.map(item => {
-                    return <><h3 className={`todo-${item.completed ? 'completed' : ''}`}>Name: {item.item}</h3> <p className={`todo-${item.completed ? 'completed' : ''}`}>Time: {item.time} Party size: {item.party}</p>
-                    <button onClick={() => toggleDone(item.id)}>Seated</button></>
+                    return <>
+                    <tr>
+                    <td className={`todo-${item.completed ? 'completed' : ''}`}>{item.item}<span className={`present-${item.kids ? '' : 'true'}`}> 👶</span></td>
+                    <td className={`todo-${item.completed ? 'completed' : ''}`}>{item.party}</td>
+                    <td><button onClick={() => toggleKids(item.id)}>Kids</button></td>
+                    <td>{item.time}</td>
+                    <td><button onClick={() => toggleDone(item.id)}>Seated</button></td>
+                    </tr>
+                    </>
                 })}
-            </div>
+            </table>
 
         )
     }

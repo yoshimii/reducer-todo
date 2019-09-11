@@ -20,10 +20,14 @@ function App() {
     dispatch({ type: "TOGGLE_DONE", payload: id});
   };
 
+  const toggleKids = (id) => {
+    dispatch({ type: "TOGGLE_KIDS", payload: id});
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-  <ToDoList  state={state.todos} toggleDone={toggleDone}/>
+  <ToDoList  state={state.todos} toggleDone={toggleDone} toggleKids={toggleKids}/>
   <TodoForm addTodo={addTodo} clearDone={clearDone}/>
   </header>
     </div>
